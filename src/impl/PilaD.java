@@ -1,8 +1,8 @@
 package impl;
 
-import tda.PilaEDTDA;
+import tda.PilaDTDA;
 
-public class PilaD implements PilaEDTDA {
+public class PilaD implements PilaDTDA {
 
 	class Nodo{
 		int info;

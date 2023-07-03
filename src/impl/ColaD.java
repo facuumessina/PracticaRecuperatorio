@@ -39,7 +39,11 @@ public class ColaD implements ColaDTDA {
 	@Override
 	public void desacolar() {
 		
+		primero = primero.sig;
 		
+		if(primero == null) { // Si la cola queda vacía
+			ultimo = null;
+		}
 		
 	}
 

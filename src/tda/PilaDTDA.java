@@ -1,6 +1,6 @@
 package tda;
 
-public interface PilaEDTDA {
+public interface PilaDTDA {
 	
 	void inicializarPila();
 	void apilar(int x); // pila inicializada

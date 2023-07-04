@@ -27,8 +27,9 @@ public class ColaD implements ColaDTDA {
 		
 		if(ultimo != null) { // Si la cola no está vacía
 			ultimo.sig = aux;
-			ultimo = aux;
 		}
+		
+		ultimo = aux;
 		
 		if (primero == null) { // Si la cola está vacía
 			primero = ultimo;

@@ -3,9 +3,11 @@ package user;
 import impl.ColaD;
 import impl.ColaPrioridadMod;
 import impl.DiccionarioMultipleD;
+import impl.PilaD;
 import tda.ColaDTDA;
 import tda.DiccionarioMultipleDTDA;
 import tda.ColaPrioridadModTDA;
+import tda.PilaDTDA;
 
 public class Main {
 
@@ -50,17 +52,29 @@ public class Main {
 //		
 //		PasarDiccionarioMultiple.clavesOrdenadas(d);
 		
-		ColaPrioridadModTDA cp = new ColaPrioridadMod();
-		cp.inicializarCola();
+//		ColaPrioridadModTDA cp = new ColaPrioridadMod();
+//		cp.inicializarCola();
+//		
+//		cp.acolarPrioridad(5, 6);
+//		cp.acolarPrioridad(7, 8);
+//		cp.acolarPrioridad(3, 2);
+//		cp.acolarPrioridad(5, 0);
+//		
+//		int suma = cp.sumaPrioridades();
+//		
+//		System.out.println(suma);
 		
-		cp.acolarPrioridad(5, 6);
-		cp.acolarPrioridad(7, 8);
-		cp.acolarPrioridad(3, 2);
-		cp.acolarPrioridad(5, 0);
-		
-		int suma = cp.sumaPrioridades();
-		
-		System.out.println(suma);
+//		PilaDTDA pila = new PilaD();
+//		pila.inicializarPila();
+//		
+//		pila.apilar(4);
+//		pila.apilar(2);
+//		pila.apilar(1);
+//		pila.apilar(3);
+//		
+//		float porcentaje = PilaA.porcentaje(pila);
+//		
+//		System.out.println(porcentaje);
 		
 		
 		

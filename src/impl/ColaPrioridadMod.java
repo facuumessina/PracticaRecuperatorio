@@ -1,8 +1,8 @@
 package impl;
 
-import tda.ColaPrioridadDTDA;
+import tda.ColaPrioridadModTDA;
 
-public class ColaPrioridadD implements ColaPrioridadDTDA {
+public class ColaPrioridadMod implements ColaPrioridadModTDA {
 
 	class NodoPrioridad{
 		int info;
@@ -13,25 +13,24 @@ public class ColaPrioridadD implements ColaPrioridadDTDA {
 	NodoPrioridad mayorPrioridad;
 	
 	@Override
-	public void inicializarColaPrioridad() {
+	public void inicializarCola() {
 		mayorPrioridad = null;
-
 	}
 
 	@Override
 	public void acolarPrioridad(int x, int prioridad) {
-		 
+		
 		NodoPrioridad nuevo = new NodoPrioridad();
 		
-		nuevo.info = x; // Nodo a acolar creado
+		nuevo.info = x;
 		nuevo.prioridad = prioridad;
 		
-		if (mayorPrioridad == null || prioridad > mayorPrioridad.prioridad) { // Si la cola está vacía o el nuevo nodo tiene mayor prioridad al primero, se acola al inicio
+		if (mayorPrioridad == null || prioridad > mayorPrioridad.prioridad) { // Validamos si la cola esta vacía o el nuevo nodo tiene mayor prioridad que el primero, se acolará al principio
 			
 			nuevo.sig = mayorPrioridad;
 			mayorPrioridad = nuevo;
 			
-		}else { // sabemos que la cola no está vacía
+		}else { // La cola no está vacía, debemos recorrerla a través de un auxiliar
 			
 			NodoPrioridad aux = mayorPrioridad;
 			
@@ -40,11 +39,10 @@ public class ColaPrioridadD implements ColaPrioridadDTDA {
 			}
 			
 			nuevo.sig = aux.sig;
-			
 			aux.sig = nuevo;
 			
 		}
-		
+
 	}
 
 	@Override
@@ -64,8 +62,24 @@ public class ColaPrioridadD implements ColaPrioridadDTDA {
 	}
 
 	@Override
-	public boolean colaPrioridadVacia() {
+	public boolean colaVacía() {
 		return (mayorPrioridad == null);
+	}
+
+	@Override
+	public int sumaPrioridades() {
+		
+		int suma = 0;
+		
+		NodoPrioridad aux = mayorPrioridad;
+		
+		
+		while (aux != null) {
+			suma += aux.prioridad;
+			aux = aux.sig;
+		}
+		
+		return suma;
 	}
 
 }

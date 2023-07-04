@@ -1,7 +1,9 @@
 package user;
 
 import impl.ColaD;
+import impl.DiccionarioMultipleD;
 import tda.ColaDTDA;
+import tda.DiccionarioMultipleDTDA;
 
 public class Main {
 
@@ -35,7 +37,16 @@ public class Main {
 		
 		*/
 		
-		
+//		DiccionarioMultipleDTDA d = new DiccionarioMultipleD();
+//		d.inicializarDiccionarioMultiple();
+//		
+//		d.agregar(5, 0);
+//		d.agregar(3, 0);;
+//		d.agregar(2, 5);
+//		d.agregar(1, 6);
+//		d.agregar(8, 2);
+//		
+//		PasarDiccionarioMultiple.clavesOrdenadas(d);
 		
 		
 		

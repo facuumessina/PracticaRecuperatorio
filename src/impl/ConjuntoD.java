@@ -65,7 +65,7 @@ public class ConjuntoD implements ConjuntoDTDA {
 		
 		Nodo aux = c;
 		
-		while ((aux != null && aux.info != x)) {
+		while ((aux != null) && (aux.info != x)) {
 			aux = aux.sig;
 		}
 		

@@ -21,29 +21,29 @@ public class ColaPrioridadD implements ColaPrioridadDTDA {
 	@Override
 	public void acolarPrioridad(int x, int prioridad) {
 		 
-		NodoPrioridad aux = new NodoPrioridad();
+		NodoPrioridad nuevo = new NodoPrioridad();
 		
-		aux.prioridad = prioridad;
-		aux.info = x; // Nodo a acolar creado
+		nuevo.info = x; // Nodo a acolar creado
+		nuevo.prioridad = prioridad;
 		
 		if (mayorPrioridad == null || prioridad > mayorPrioridad.prioridad) { // Si la cola está vacía o el nuevo nodo tiene mayor prioridad al primero, se acola al inicio
 			
-			aux.sig = mayorPrioridad;
-			mayorPrioridad = aux;
+			nuevo.sig = mayorPrioridad;
+			mayorPrioridad = nuevo;
+			
 		}else { // sabemos que la cola no está vacía
 			
-			NodoPrioridad aux2 = mayorPrioridad;
+			NodoPrioridad aux = mayorPrioridad;
 			
-			while (aux2.sig != null && aux.sig.prioridad >= prioridad) {
-				aux2 = aux2.sig;
+			while (aux.sig != null && aux.sig.prioridad >= prioridad) {
+				aux = aux.sig;
 			}
 			
-			aux.sig = aux2.sig;
+			nuevo.sig = aux.sig;
 			
-			aux2 = aux;
+			aux.sig = nuevo;
 			
 		}
-		
 		
 
 	}

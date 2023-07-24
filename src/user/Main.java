@@ -1,13 +1,7 @@
 package user;
 
-import impl.ColaD;
-import impl.ColaPrioridadMod;
-import impl.DiccionarioMultipleD;
-import impl.PilaD;
-import tda.ColaDTDA;
-import tda.DiccionarioMultipleDTDA;
-import tda.ColaPrioridadModTDA;
-import tda.PilaDTDA;
+import impl.ABBD;
+import tda.ABBDTDA;
 
 public class Main {
 
@@ -18,14 +12,14 @@ public class Main {
 		// Ejercicio uso cola//
 		
 		
-		ColaDTDA origen  = new ColaD();
-		origen.inicializarCola();
-		
-		origen.acolar(1);
-		origen.acolar(2);
-		origen.acolar(3);
-		origen.acolar(4);
-		origen.acolar(5);
+//		ColaDTDA origen  = new ColaD();
+//		origen.inicializarCola();
+//		
+//		origen.acolar(1);
+//		origen.acolar(2);
+//		origen.acolar(3);
+//		origen.acolar(4);
+//		origen.acolar(5);
 		
 		/*
 		
@@ -75,6 +69,19 @@ public class Main {
 //		float porcentaje = PilaA.porcentaje(pila);
 //		
 //		System.out.println(porcentaje);
+		
+//		ABBDTDA a = new ABBD();
+//		a.inicializarArbol();
+//		
+//		a.agregarElem(1);
+//		a.agregarElem(2);
+//		a.agregarElem(3);
+//		a.agregarElem(10);
+//		
+//		int suma = CalcularSuma.nodosEnABB(a);
+//		
+//		System.out.println(suma);
+		
 		
 		
 		

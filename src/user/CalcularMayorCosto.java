@@ -48,7 +48,7 @@ public class CalcularMayorCosto {
 		
 		vert = g.vertices();
 		
-		boolean existe;
+		boolean existe = false;
 		
 		while (!vert.conjuntoVacio()) {
 			
@@ -56,16 +56,10 @@ public class CalcularMayorCosto {
 			
 			if (e == v) {
 				existe = true;
-			}else {
-				vert.sacar(e);
 			}
 			
-		}
-		
-		if (vert.conjuntoVacio()) {
-			existe = false;
-		}else {
-			existe = true;
+			vert.sacar(e);
+			
 		}
 		
 		return existe;

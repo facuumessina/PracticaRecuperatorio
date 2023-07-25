@@ -39,11 +39,11 @@ public class ABBD implements ABBDTDA {
 	@Override
 	public void eliminarElem(int x) {
 		if (raiz != null) { // verificación de arbol no vacío
-			if (raiz.info == x && !raiz.hijoIzq.arbolVacio() && raiz.hijoDer.arbolVacio()) {
+			if (raiz.info == x && raiz.hijoIzq.arbolVacio() && raiz.hijoDer.arbolVacio()) {
 				raiz = null;
-			} else if (raiz.info == x && !raiz.hijoIzq.hijoIzq().arbolVacio()) {
+			} else if (raiz.info == x && !raiz.hijoIzq.arbolVacio()) {
 				raiz.info = mayor(raiz.hijoIzq); // Reemplazamos con el mayor de los menores
-				raiz.hijoDer.eliminarElem(raiz.info);
+				raiz.hijoIzq.eliminarElem(raiz.info);
 			} else if (raiz.info == x && raiz.hijoIzq.arbolVacio()) {
 				raiz.info = menor(raiz.hijoDer); // Reemplazamos con el menor de los mayores
 				raiz.hijoDer.eliminarElem(raiz.info);
